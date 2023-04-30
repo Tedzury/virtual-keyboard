@@ -1,5 +1,6 @@
 const keyboard = {
   Backquote: {
+    type: 'regular',
     ru: {
       main: 'ё',
       shift: 'Ё',
@@ -10,6 +11,7 @@ const keyboard = {
     },
   },
   Digit1: {
+    type: 'regular',
     ru: {
       main: '1',
       shift: '!',
@@ -20,6 +22,7 @@ const keyboard = {
     },
   },
   Digit2: {
+    type: 'regular',
     ru: {
       main: '2',
       shift: '"',
@@ -30,6 +33,7 @@ const keyboard = {
     },
   },
   Digit3: {
+    type: 'regular',
     ru: {
       main: '3',
       shift: '№',
@@ -40,6 +44,7 @@ const keyboard = {
     },
   },
   Digit4: {
+    type: 'regular',
     ru: {
       main: '4',
       shift: ';',
@@ -50,6 +55,7 @@ const keyboard = {
     },
   },
   Digit5: {
+    type: 'regular',
     ru: {
       main: '5',
       shift: '%',
@@ -60,6 +66,7 @@ const keyboard = {
     },
   },
   Digit6: {
+    type: 'regular',
     ru: {
       main: '6',
       shift: ':',
@@ -70,6 +77,7 @@ const keyboard = {
     },
   },
   Digit7: {
+    type: 'regular',
     ru: {
       main: '7',
       shift: '?',
@@ -80,6 +88,7 @@ const keyboard = {
     },
   },
   Digit8: {
+    type: 'regular',
     ru: {
       main: '8',
       shift: '*',
@@ -90,6 +99,7 @@ const keyboard = {
     },
   },
   Digit9: {
+    type: 'regular',
     ru: {
       main: '9',
       shift: '(',
@@ -100,6 +110,7 @@ const keyboard = {
     },
   },
   Digit0: {
+    type: 'regular',
     ru: {
       main: '0',
       shift: ')',
@@ -110,6 +121,7 @@ const keyboard = {
     },
   },
   Minus: {
+    type: 'regular',
     ru: {
       main: '-',
       shift: '_',
@@ -120,6 +132,7 @@ const keyboard = {
     },
   },
   Equal: {
+    type: 'regular',
     ru: {
       main: '=',
       shift: '+',
@@ -130,6 +143,7 @@ const keyboard = {
     },
   },
   Backspace: {
+    type: 'functional',
     ru: {
       main: 'Backspace',
       shift: 'Backspace',
@@ -140,6 +154,7 @@ const keyboard = {
     },
   },
   Tab: {
+    type: 'functional',
     ru: {
       main: 'Tab',
       shift: 'Tab',
@@ -150,6 +165,7 @@ const keyboard = {
     },
   },
   KeyQ: {
+    type: 'regular',
     ru: {
       main: 'й',
       shift: 'Й',
@@ -160,6 +176,7 @@ const keyboard = {
     },
   },
   KeyW: {
+    type: 'regular',
     ru: {
       main: 'ц',
       shift: 'Ц',
@@ -170,6 +187,7 @@ const keyboard = {
     },
   },
   KeyE: {
+    type: 'regular',
     ru: {
       main: 'у',
       shift: 'У',
@@ -180,6 +198,7 @@ const keyboard = {
     },
   },
   KeyR: {
+    type: 'regular',
     ru: {
       main: 'к',
       shift: 'К',
@@ -190,6 +209,7 @@ const keyboard = {
     },
   },
   KeyT: {
+    type: 'regular',
     ru: {
       main: 'е',
       shift: 'Е',
@@ -200,6 +220,7 @@ const keyboard = {
     },
   },
   KeyY: {
+    type: 'regular',
     ru: {
       main: 'н',
       shift: 'Н',
@@ -210,6 +231,7 @@ const keyboard = {
     },
   },
   KeyU: {
+    type: 'regular',
     ru: {
       main: 'г',
       shift: 'Г',
@@ -220,6 +242,7 @@ const keyboard = {
     },
   },
   KeyI: {
+    type: 'regular',
     ru: {
       main: 'ш',
       shift: 'Ш',
@@ -230,6 +253,7 @@ const keyboard = {
     },
   },
   KeyO: {
+    type: 'regular',
     ru: {
       main: 'щ',
       shift: 'Щ',
@@ -240,6 +264,7 @@ const keyboard = {
     },
   },
   KeyP: {
+    type: 'regular',
     ru: {
       main: 'з',
       shift: 'З',
@@ -250,6 +275,7 @@ const keyboard = {
     },
   },
   BracketLeft: {
+    type: 'regular',
     ru: {
       main: 'х',
       shift: 'Х',
@@ -260,6 +286,7 @@ const keyboard = {
     },
   },
   BracketRight: {
+    type: 'regular',
     ru: {
       main: 'ъ',
       shift: 'Ъ',
@@ -280,6 +307,7 @@ const keyboard = {
     },
   },
   Delete: {
+    type: 'functional',
     ru: {
       main: 'Delete',
       shift: 'Delete',
@@ -290,6 +318,7 @@ const keyboard = {
     },
   },
   CapsLock: {
+    type: 'functional',
     ru: {
       main: 'CapsLock',
       shift: 'CapsLock',
@@ -300,6 +329,7 @@ const keyboard = {
     },
   },
   KeyA: {
+    type: 'regular',
     ru: {
       main: 'ф',
       shift: 'Ф',
@@ -310,6 +340,7 @@ const keyboard = {
     },
   },
   KeyS: {
+    type: 'regular',
     ru: {
       main: 'ы',
       shift: 'Ы',
@@ -320,6 +351,7 @@ const keyboard = {
     },
   },
   KeyD: {
+    type: 'regular',
     ru: {
       main: 'в',
       shift: 'В',
@@ -330,6 +362,7 @@ const keyboard = {
     },
   },
   KeyF: {
+    type: 'regular',
     ru: {
       main: 'а',
       shift: 'А',
@@ -340,6 +373,7 @@ const keyboard = {
     },
   },
   KeyG: {
+    type: 'regular',
     ru: {
       main: 'п',
       shift: 'П',
@@ -350,6 +384,7 @@ const keyboard = {
     },
   },
   KeyH: {
+    type: 'regular',
     ru: {
       main: 'р',
       shift: 'Р',
@@ -360,6 +395,7 @@ const keyboard = {
     },
   },
   KeyJ: {
+    type: 'regular',
     ru: {
       main: 'о',
       shift: 'О',
@@ -370,6 +406,7 @@ const keyboard = {
     },
   },
   KeyK: {
+    type: 'regular',
     ru: {
       main: 'л',
       shift: 'Л',
@@ -380,6 +417,7 @@ const keyboard = {
     },
   },
   KeyL: {
+    type: 'regular',
     ru: {
       main: 'д',
       shift: 'Д',
@@ -390,6 +428,7 @@ const keyboard = {
     },
   },
   Semicolon: {
+    type: 'regular',
     ru: {
       main: 'ж',
       shift: 'Ж',
@@ -400,6 +439,7 @@ const keyboard = {
     },
   },
   Quote: {
+    type: 'regular',
     ru: {
       main: 'э',
       shift: 'Э',
@@ -410,6 +450,7 @@ const keyboard = {
     },
   },
   Enter: {
+    type: 'functional',
     ru: {
       main: 'Enter',
       shift: 'Enter',
@@ -420,6 +461,7 @@ const keyboard = {
     },
   },
   ShiftLeft: {
+    type: 'functional',
     ru: {
       main: 'Shift',
       shift: 'Shift',
@@ -430,6 +472,7 @@ const keyboard = {
     },
   },
   KeyZ: {
+    type: 'regular',
     ru: {
       main: 'я',
       shift: 'Я',
@@ -440,6 +483,7 @@ const keyboard = {
     },
   },
   KeyX: {
+    type: 'regular',
     ru: {
       main: 'ч',
       shift: 'Ч',
@@ -450,6 +494,7 @@ const keyboard = {
     },
   },
   KeyC: {
+    type: 'regular',
     ru: {
       main: 'с',
       shift: 'С',
@@ -460,6 +505,7 @@ const keyboard = {
     },
   },
   KeyV: {
+    type: 'regular',
     ru: {
       main: 'м',
       shift: 'М',
@@ -470,6 +516,7 @@ const keyboard = {
     },
   },
   KeyB: {
+    type: 'regular',
     ru: {
       main: 'и',
       shift: 'И',
@@ -480,6 +527,7 @@ const keyboard = {
     },
   },
   KeyN: {
+    type: 'regular',
     ru: {
       main: 'т',
       shift: 'Т',
@@ -490,6 +538,7 @@ const keyboard = {
     },
   },
   KeyM: {
+    type: 'regular',
     ru: {
       main: 'ь',
       shift: 'Ь',
@@ -500,6 +549,7 @@ const keyboard = {
     },
   },
   Comma: {
+    type: 'regular',
     ru: {
       main: 'б',
       shift: 'Б',
@@ -510,6 +560,7 @@ const keyboard = {
     },
   },
   Period: {
+    type: 'regular',
     ru: {
       main: 'ю',
       shift: 'Ю',
@@ -520,6 +571,7 @@ const keyboard = {
     },
   },
   Slash: {
+    type: 'regular',
     ru: {
       main: '.',
       shift: ',',
@@ -530,6 +582,7 @@ const keyboard = {
     },
   },
   ArrowUp: {
+    type: 'regular',
     ru: {
       main: '↑',
       shift: '↑',
@@ -540,6 +593,7 @@ const keyboard = {
     },
   },
   ShiftRight: {
+    type: 'functional',
     ru: {
       main: 'Shift',
       shift: 'Shift',
@@ -550,6 +604,7 @@ const keyboard = {
     },
   },
   ControlLeft: {
+    type: 'functional',
     ru: {
       main: 'Ctrl',
       shift: 'Ctrl',
@@ -560,6 +615,7 @@ const keyboard = {
     },
   },
   MetaLeft: {
+    type: 'functional',
     ru: {
       main: 'Win',
       shift: 'Win',
@@ -570,6 +626,7 @@ const keyboard = {
     },
   },
   AltLeft: {
+    type: 'functional',
     ru: {
       main: 'Alt',
       shift: 'Alt',
@@ -580,6 +637,7 @@ const keyboard = {
     },
   },
   Space: {
+    type: 'functional',
     ru: {
       main: 'Space',
       shift: 'Space',
@@ -590,6 +648,7 @@ const keyboard = {
     },
   },
   AltRight: {
+    type: 'functional',
     ru: {
       main: 'Alt',
       shift: 'Alt',
@@ -600,6 +659,7 @@ const keyboard = {
     },
   },
   ArrowLeft: {
+    type: 'regular',
     ru: {
       main: '←',
       shift: '←',
@@ -610,6 +670,7 @@ const keyboard = {
     },
   },
   ArrowDown: {
+    type: 'regular',
     ru: {
       main: '↓',
       shift: '↓',
@@ -620,6 +681,7 @@ const keyboard = {
     },
   },
   ArrowRight: {
+    type: 'regular',
     ru: {
       main: '→',
       shift: '→',
@@ -630,6 +692,7 @@ const keyboard = {
     },
   },
   ControlRight: {
+    type: 'functional',
     ru: {
       main: 'Ctrl',
       shift: 'Ctrl',
@@ -641,19 +704,103 @@ const keyboard = {
   },
 };
 
-const lang = 'en';
-const isShift = 'main';
+let lang = 'en';
+let isShift = 'main';
+const keysArray = Object.keys(keyboard);
 
 const body = document.querySelector('#body');
-
+const textArea = document.createElement('textarea');
+textArea.classList.add('text-area');
+textArea.textContent = '';
 const keyboardWrapper = document.createElement('div');
 keyboardWrapper.classList.add('key-wrapp');
 
-Object.keys(keyboard).forEach((key) => {
-  const keyBoardKey = document.createElement('div');
-  keyBoardKey.classList.add('key');
-  keyBoardKey.textContent = keyboard[key][lang][isShift];
-  keyboardWrapper.append(keyBoardKey);
+body.append(textArea);
+body.append(keyboardWrapper);
+
+function prepareKeyboardLayout() {
+  keyboardWrapper.innerHTML = '';
+  keysArray.forEach((key) => {
+    const keyBoardKey = document.createElement('div');
+    keyBoardKey.classList.add('key');
+    keyBoardKey.setAttribute('data-key-code', key);
+    keyBoardKey.textContent = keyboard[key][lang][isShift];
+    keyboardWrapper.append(keyBoardKey);
+  });
+}
+
+function repaintKeyboard() {
+  const keys = document.querySelectorAll('.key');
+
+  keys.forEach((node) => {
+    const keyCode = node.getAttribute('data-key-code');
+    if (keyboard[keyCode].type === 'regular') {
+      node.textContent = keyboard[keyCode][lang][isShift];
+    }
+  });
+}
+
+function handleFunctionKeyStroke(keyCode) {
+  if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
+    if (isShift === 'main') {
+      isShift = 'shift';
+    } else {
+      isShift = 'main';
+    }
+    repaintKeyboard();
+  }
+  if (keyCode === 'CapsLock') {
+    if (isShift === 'main') {
+      document.querySelector('[data-key-code="CapsLock"]').classList.add('key_active');
+      isShift = 'shift';
+    } else {
+      document.querySelector('[data-key-code="CapsLock"]').classList.remove('key_active');
+      isShift = 'main';
+    }
+    repaintKeyboard();
+  }
+}
+
+function keyStrokeHandler(e) {
+  const keyCode = e.code;
+  const key = document.querySelector(`[data-key-code="${keyCode}"]`);
+  key.classList.add('key_active');
+
+  if (keyboard[keyCode].type === 'regular') {
+    const char = keyboard[keyCode][lang][isShift];
+    textArea.textContent += char;
+  } else {
+    handleFunctionKeyStroke(keyCode);
+  }
+}
+
+function keyUpHandler(e) {
+  const keyCode = e.code;
+  const key = document.querySelector(`[data-key-code="${keyCode}"]`);
+  if (key.dataset.keyCode !== 'CapsLock') key.classList.remove('key_active');
+
+  if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
+    if (isShift === 'main') {
+      isShift = 'shift';
+    } else {
+      isShift = 'main';
+    }
+    repaintKeyboard();
+  }
+}
+
+body.addEventListener('keydown', (e) => {
+  if (keysArray.indexOf(e.code) > -1) {
+    e.preventDefault();
+    keyStrokeHandler(e);
+  }
 });
 
-body.append(keyboardWrapper);
+body.addEventListener('keyup', (e) => {
+  if (keysArray.indexOf(e.code) > -1) {
+    e.preventDefault();
+    keyUpHandler(e);
+  }
+});
+
+prepareKeyboardLayout();

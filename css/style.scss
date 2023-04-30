@@ -1,3 +1,8 @@
+.text-area {
+  margin: 0 auto;
+  width: 500px;
+}
+
 .key-wrapp {
   margin: 0 auto;
   display: flex;
@@ -13,6 +18,9 @@
   border: 1px solid black;
   padding: 0 10px 0 10px;
   &:hover {
+    background-color:aquamarine;
+  }
+  &_active {
     background-color:aquamarine;
   }
 }
