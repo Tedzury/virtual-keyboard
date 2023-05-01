@@ -166,11 +166,11 @@ const keyboard = {
   },
   Tab: {
     ru: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Tab',
     },
     en: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Tab',
     },
   },
@@ -442,11 +442,11 @@ const keyboard = {
   },
   Enter: {
     ru: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Enter',
     },
     en: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Enter',
     },
   },
@@ -617,11 +617,11 @@ const keyboard = {
   },
   Space: {
     ru: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Space',
     },
     en: {
-      type: 'functional',
+      type: 'spacing',
       main: 'Space',
     },
   },
@@ -718,9 +718,18 @@ function keyStrokeHandler(e) {
   if (e.key === 'Alt' || e.key === 'Control') {
     changeLang(e);
   }
+  if (e.code === 'Backspace') {
+    backspace();
+  }
+  if (e.code === 'Delete') {
+    deleteChar();
+  }
   const keyType = keyboard[e.code][language].type;
   if (keyType === 'regular' || keyType === 'shiftable') {
-    modifyTextArea(e)
+    modifyTextArea(e);
+  }
+  if (keyType === 'spacing') {
+    insertSpaces(e);
   }
 }
 
@@ -729,6 +738,40 @@ function keyUpHandler(e) {
   if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
     shift();
   }
+}
+function backspace() {
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
+
+  textArea.value = textArea.value
+    .slice(0, start === end ? start - 1 : start) + textArea.value.slice(end);
+
+  textArea.selectionStart = start === end ? start - 1 : start;
+  textArea.selectionEnd = textArea.selectionStart;
+}
+function deleteChar() {
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
+
+  if (!(textArea.value.length > end)) return;
+
+  textArea.value = textArea.value.slice(0, start) + textArea.value.slice(end + 1);
+  textArea.selectionStart = start;
+  textArea.selectionEnd = textArea.selectionStart;
+}
+function insertSpaces(e) {
+  let space;
+  if (e.code === 'Tab') space = '\t';
+  if (e.code === 'Enter') space = '\n';
+  if (e.code === 'Space') space = ' ';
+
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
+
+  textArea.value = textArea.value.slice(0, start) + space + textArea.value.slice(end);
+
+  textArea.selectionStart = start + 1;
+  textArea.selectionEnd = textArea.selectionStart;
 }
 function modifyTextArea(e) {
   const char = keyNodes.find((elem) => elem.dataset.keyCode === e.code).textContent;
@@ -739,7 +782,7 @@ function modifyTextArea(e) {
   textArea.value = textArea.value.slice(0, start) + char + textArea.value.slice(end);
 
   textArea.selectionStart = start + 1;
-  textArea.selectionEnd = e.target.selectionStart;
+  textArea.selectionEnd = textArea.selectionStart;
 }
 function changeLang(e) {
   if (e.ctrlKey && e.altKey) {
@@ -748,7 +791,6 @@ function changeLang(e) {
     prepareKeyboardLayout();
   }
 }
-
 function shift() {
   keyNodes.forEach((key) => {
     if (key.dataset.keyType === 'shiftable') {
@@ -765,7 +807,6 @@ function shift() {
     }
   });
 }
-
 function capsLock() {
   isCapsLock = !isCapsLock;
   keyNodes.forEach((key) => {
