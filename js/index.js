@@ -704,12 +704,11 @@ function prepareKeyboardLayout() {
     keyBoardKey.textContent = keyboard[key][language].main;
     keyboardWrapper.append(keyBoardKey);
   });
-  keyNodes = document.querySelectorAll('.key');
+  keyNodes = Array.from(document.querySelectorAll('.key'));
 }
 
 function keyStrokeHandler(e) {
   document.querySelector(`[data-key-code="${e.code}"]`).classList.add('key_active');
-
   if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
     shift();
   }
@@ -719,6 +718,10 @@ function keyStrokeHandler(e) {
   if (e.key === 'Alt' || e.key === 'Control') {
     changeLang(e);
   }
+  const keyType = keyboard[e.code][language].type;
+  if (keyType === 'regular' || keyType === 'shiftable') {
+    modifyTextArea(e)
+  }
 }
 
 function keyUpHandler(e) {
@@ -727,7 +730,17 @@ function keyUpHandler(e) {
     shift();
   }
 }
+function modifyTextArea(e) {
+  const char = keyNodes.find((elem) => elem.dataset.keyCode === e.code).textContent;
 
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
+
+  textArea.value = textArea.value.slice(0, start) + char + textArea.value.slice(end);
+
+  textArea.selectionStart = start + 1;
+  textArea.selectionEnd = e.target.selectionStart;
+}
 function changeLang(e) {
   if (e.ctrlKey && e.altKey) {
     language = (language === 'en' ? 'ru' : 'en');
@@ -778,5 +791,9 @@ body.addEventListener('keyup', (e) => {
     keyUpHandler(e);
   }
 });
+
+setInterval(() => {
+  textArea.focus();
+}, 0);
 
 prepareKeyboardLayout();
