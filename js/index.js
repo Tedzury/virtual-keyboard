@@ -684,15 +684,30 @@ const keysArray = Object.keys(keyboard);
 let keyNodes;
 
 const body = document.querySelector('#body');
+const pageWrapper = document.createElement('div');
+const title = document.createElement('div');
+const langDiv = document.createElement('div');
 const textArea = document.createElement('textarea');
 const keyboardWrapper = document.createElement('div');
+const description = document.createElement('div');
 
+pageWrapper.classList.add('pageWrapper');
+title.classList.add('title');
+title.textContent = 'RSS Virtual keyboard!';
+langDiv.classList = 'langDiv';
+langDiv.textContent = language;
 textArea.classList.add('text-area');
-keyboardWrapper.classList.add('key-wrapp');
 textArea.textContent = '';
+keyboardWrapper.classList.add('key-wrapp');
+description.classList.add('description');
+description.innerHTML = '<p>Keyboard is made for Windows OS. To switch language input, press Ctrl + Alt simultaneously.</br> Happy inputing! :)</p>';
 
-body.append(textArea);
-body.append(keyboardWrapper);
+pageWrapper.append(title);
+pageWrapper.append(langDiv);
+pageWrapper.append(textArea);
+pageWrapper.append(keyboardWrapper);
+pageWrapper.append(description);
+body.append(pageWrapper);
 
 function prepareKeyboardLayout() {
   keyboardWrapper.innerHTML = '';
@@ -755,9 +770,12 @@ function modifyTextArea(e) {
 }
 function changeLang(e) {
   if (e.ctrlKey && e.altKey) {
-    language = (language === 'en' ? 'ru' : 'en');
-    localStorage.setItem('language', language);
-    prepareKeyboardLayout();
+    setTimeout(() => {
+      language = (language === 'en' ? 'ru' : 'en');
+      localStorage.setItem('language', language);
+      prepareKeyboardLayout();
+      langDiv.textContent = language;
+    }, 100);
   }
 }
 function shift() {
