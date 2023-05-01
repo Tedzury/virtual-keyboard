@@ -707,38 +707,7 @@ function prepareKeyboardLayout() {
   keyNodes = Array.from(document.querySelectorAll('.key'));
 }
 
-function keyStrokeHandler(e) {
-  document.querySelector(`[data-key-code="${e.code}"]`).classList.add('key_active');
-  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
-    shift();
-  }
-  if (e.code === 'CapsLock') {
-    capsLock();
-  }
-  if (e.key === 'Alt' || e.key === 'Control') {
-    changeLang(e);
-  }
-  if (e.code === 'Backspace') {
-    backspace();
-  }
-  if (e.code === 'Delete') {
-    deleteChar();
-  }
-  const keyType = keyboard[e.code][language].type;
-  if (keyType === 'regular' || keyType === 'shiftable') {
-    modifyTextArea(e);
-  }
-  if (keyType === 'spacing') {
-    insertSpaces(e);
-  }
-}
-
-function keyUpHandler(e) {
-  if (e.code !== 'CapsLock') document.querySelector(`[data-key-code="${e.code}"]`).classList.remove('key_active');
-  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
-    shift();
-  }
-}
+/* eslint-disable no-param-reassign */
 function backspace() {
   const start = textArea.selectionStart;
   const end = textArea.selectionEnd;
@@ -794,7 +763,7 @@ function changeLang(e) {
 function shift() {
   keyNodes.forEach((key) => {
     if (key.dataset.keyType === 'shiftable') {
-      const keyCode = key.dataset.keyCode;
+      const { keyCode } = key.dataset;
       key.textContent = key.textContent === keyboard[keyCode][language].shift
         ? keyboard[keyCode][language].main : keyboard[keyCode][language].shift;
     }
@@ -818,6 +787,40 @@ function capsLock() {
     }
   });
 }
+/* eslint-enable no-param-reassign */
+
+function keyStrokeHandler(e) {
+  document.querySelector(`[data-key-code="${e.code}"]`).classList.add('key_active');
+
+  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
+    shift();
+  }
+  if (e.code === 'CapsLock') {
+    capsLock();
+  }
+  if (e.key === 'Alt' || e.key === 'Control') {
+    changeLang(e);
+  }
+  if (e.code === 'Backspace') {
+    backspace();
+  }
+  if (e.code === 'Delete') {
+    deleteChar();
+  }
+  const keyType = keyboard[e.code][language].type;
+  if (keyType === 'regular' || keyType === 'shiftable') {
+    modifyTextArea(e);
+  }
+  if (keyType === 'spacing') {
+    insertSpaces(e);
+  }
+}
+function keyUpHandler(e) {
+  if (e.code !== 'CapsLock') document.querySelector(`[data-key-code="${e.code}"]`).classList.remove('key_active');
+  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
+    shift();
+  }
+}
 
 body.addEventListener('keydown', (e) => {
   if (keysArray.indexOf(e.code) > -1) {
@@ -825,12 +828,17 @@ body.addEventListener('keydown', (e) => {
     keyStrokeHandler(e);
   }
 });
-
 body.addEventListener('keyup', (e) => {
   if (keysArray.indexOf(e.code) > -1) {
     e.preventDefault();
     keyUpHandler(e);
   }
+});
+body.addEventListener('mousedown', (e) => {
+  body.dispatchEvent(new KeyboardEvent('keydown', { code: e.target.dataset.keyCode }));
+});
+body.addEventListener('mouseup', (e) => {
+  body.dispatchEvent(new KeyboardEvent('keyup', { code: e.target.dataset.keyCode }));
 });
 
 setInterval(() => {
