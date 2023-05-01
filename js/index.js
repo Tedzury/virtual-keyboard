@@ -707,64 +707,25 @@ function prepareKeyboardLayout() {
   keyNodes = document.querySelectorAll('.key');
 }
 
-function repaintKeyboard() {
-  const keys = document.querySelectorAll('.key');
-
-  keys.forEach((node) => {
-    const keyCode = node.getAttribute('data-key-code');
-    if (keyboard[keyCode].type === 'regular') {
-      node.textContent = keyboard[keyCode][lang].main;
-    }
-  });
-}
-
-function handleFunctionKeyStroke(keyCode) {
-  // if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
-  //   if (isShift === 'main') {
-  //     isShift = 'shift';
-  //   } else {
-  //     isShift = 'main';
-  //   }
-  //   repaintKeyboard();
-  // }
-  // if (keyCode === 'CapsLock') {
-  //   if (isShift === 'main') {
-  //     document.querySelector('[data-key-code="CapsLock"]').classList.add('key_active');
-  //     isShift = 'shift';
-  //   } else {
-  //     document.querySelector('[data-key-code="CapsLock"]').classList.remove('key_active');
-  //     isShift = 'main';
-  //   }
-  //   repaintKeyboard();
-  // }
-  // if (keyCode === 'ControlRight' || keyCode === 'ControlLeft' || keyCode === 'AltRight' || keyCode === 'AltLeft') {
-  //   const ctrl = document.querySelector('.key_active div[data-key-code="ControlRight"]') || document.querySelector('.key_activediv[data-key-code="ControlLeft"]');
-  //   const alt = document.querySelector('.key_active div[data-key-code="AltRight"]') || document.querySelector('.key_activediv[data-key-code="AltRight"]');
-  //   if (ctrl && alt) {
-  //     lang = 'ru';
-  //     repaintKeyboard();
-  //   }
-  // }
-}
-
 function keyStrokeHandler(e) {
   document.querySelector(`[data-key-code="${e.code}"]`).classList.add('key_active');
+
+  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
+    shift();
+  }
+  if (e.code === 'CapsLock') {
+    capsLock();
+  }
   if (e.key === 'Alt' || e.key === 'Control') {
     changeLang(e);
   }
 }
 
 function keyUpHandler(e) {
-  document.querySelector(`[data-key-code="${e.code}"]`).classList.remove('key_active');
-
-  // if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
-  //   if (isShift === 'main') {
-  //     isShift = 'shift';
-  //   } else {
-  //     isShift = 'main';
-  //   }
-  //   repaintKeyboard();
-  // }
+  if (e.code !== 'CapsLock') document.querySelector(`[data-key-code="${e.code}"]`).classList.remove('key_active');
+  if (e.code === 'ShiftRight' || e.code === 'ShiftLeft') {
+    shift();
+  }
 }
 
 function changeLang(e) {
@@ -773,6 +734,35 @@ function changeLang(e) {
     localStorage.setItem('language', language);
     prepareKeyboardLayout();
   }
+}
+
+function shift() {
+  keyNodes.forEach((key) => {
+    if (key.dataset.keyType === 'shiftable') {
+      const keyCode = key.dataset.keyCode;
+      key.textContent = key.textContent === keyboard[keyCode][language].shift
+        ? keyboard[keyCode][language].main : keyboard[keyCode][language].shift;
+    }
+    if (isCapsLock && key.dataset.keyType === 'regular') {
+      key.textContent = key.textContent === key.textContent.toLowerCase()
+        ? key.textContent.toUpperCase() : key.textContent.toLowerCase();
+    } else if (!isCapsLock && key.dataset.keyType === 'regular') {
+      key.textContent = key.textContent === key.textContent.toUpperCase()
+        ? key.textContent.toLowerCase() : key.textContent.toUpperCase();
+    }
+  });
+}
+
+function capsLock() {
+  isCapsLock = !isCapsLock;
+  keyNodes.forEach((key) => {
+    if (isCapsLock && key.dataset.keyType === 'regular') {
+      key.textContent = key.textContent.toUpperCase();
+    } else if (key.dataset.keyType === 'regular') {
+      key.textContent = key.textContent.toLowerCase();
+      document.querySelector('[data-key-code="CapsLock"]').classList.remove('key_active');
+    }
+  });
 }
 
 body.addEventListener('keydown', (e) => {
