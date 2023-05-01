@@ -1,719 +1,695 @@
 const keyboard = {
   Backquote: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ё',
-      shift: 'Ё',
     },
     en: {
+      type: 'shiftable',
       main: '`',
       shift: '~',
     },
   },
   Digit1: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '1',
       shift: '!',
     },
     en: {
+      type: 'shiftable',
       main: '1',
       shift: '!',
     },
   },
   Digit2: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '2',
       shift: '"',
     },
     en: {
+      type: 'shiftable',
       main: '2',
       shift: '@',
     },
   },
   Digit3: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '3',
       shift: '№',
     },
     en: {
+      type: 'shiftable',
       main: '3',
       shift: '#',
     },
   },
   Digit4: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '4',
       shift: ';',
     },
     en: {
+      type: 'shiftable',
       main: '4',
       shift: '$',
     },
   },
   Digit5: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '5',
       shift: '%',
     },
     en: {
+      type: 'shiftable',
       main: '5',
       shift: '%',
     },
   },
   Digit6: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '6',
       shift: ':',
     },
     en: {
+      type: 'shiftable',
       main: '6',
       shift: '^',
     },
   },
   Digit7: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '7',
       shift: '?',
     },
     en: {
+      type: 'shiftable',
       main: '7',
       shift: '&',
     },
   },
   Digit8: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '8',
       shift: '*',
     },
     en: {
+      type: 'shiftable',
       main: '8',
       shift: '*',
     },
   },
   Digit9: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '9',
       shift: '(',
     },
     en: {
+      type: 'shiftable',
       main: '9',
       shift: '(',
     },
   },
   Digit0: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '0',
       shift: ')',
     },
     en: {
+      type: 'shiftable',
       main: '0',
       shift: ')',
     },
   },
   Minus: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '-',
       shift: '_',
     },
     en: {
+      type: 'shiftable',
       main: '-',
       shift: '_',
     },
   },
   Equal: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '=',
       shift: '+',
     },
     en: {
+      type: 'shiftable',
       main: '=',
       shift: '+',
     },
   },
   Backspace: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Backspace',
-      shift: 'Backspace',
     },
     en: {
+      type: 'functional',
       main: 'Backspace',
-      shift: 'Backspace',
     },
   },
   Tab: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Tab',
-      shift: 'Tab',
     },
     en: {
+      type: 'functional',
       main: 'Tab',
-      shift: 'Tab',
     },
   },
   KeyQ: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'й',
-      shift: 'Й',
     },
     en: {
+      type: 'regular',
       main: 'q',
-      shift: 'Q',
     },
   },
   KeyW: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ц',
-      shift: 'Ц',
     },
     en: {
+      type: 'regular',
       main: 'w',
-      shift: 'W',
     },
   },
   KeyE: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'у',
-      shift: 'У',
     },
     en: {
+      type: 'regular',
       main: 'e',
-      shift: 'E',
     },
   },
   KeyR: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'к',
-      shift: 'К',
     },
     en: {
+      type: 'regular',
       main: 'r',
-      shift: 'R',
     },
   },
   KeyT: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'е',
-      shift: 'Е',
     },
     en: {
+      type: 'regular',
       main: 't',
-      shift: 'T',
     },
   },
   KeyY: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'н',
-      shift: 'Н',
     },
     en: {
+      type: 'regular',
       main: 'y',
-      shift: 'Y',
     },
   },
   KeyU: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'г',
-      shift: 'Г',
     },
     en: {
+      type: 'regular',
       main: 'u',
-      shift: 'U',
     },
   },
   KeyI: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ш',
-      shift: 'Ш',
     },
     en: {
+      type: 'regular',
       main: 'i',
-      shift: 'I',
     },
   },
   KeyO: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'щ',
-      shift: 'Щ',
     },
     en: {
+      type: 'regular',
       main: 'o',
-      shift: 'O',
     },
   },
   KeyP: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'з',
-      shift: 'З',
     },
     en: {
+      type: 'regular',
       main: 'p',
-      shift: 'P',
     },
   },
   BracketLeft: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'х',
-      shift: 'Х',
     },
     en: {
+      type: 'shiftable',
       main: '[',
       shift: '{',
     },
   },
   BracketRight: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ъ',
-      shift: 'Ъ',
     },
     en: {
+      type: 'shiftable',
       main: ']',
       shift: '}',
     },
   },
   Backslash: {
     ru: {
+      type: 'shiftable',
       main: '\\',
       shift: '/',
     },
     en: {
+      type: 'shiftable',
       main: '\\',
       shift: '|',
     },
   },
   Delete: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Delete',
-      shift: 'Delete',
     },
     en: {
+      type: 'functional',
       main: 'Delete',
-      shift: 'Delete',
     },
   },
   CapsLock: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'CapsLock',
-      shift: 'CapsLock',
     },
     en: {
+      type: 'functional',
       main: 'CapsLock',
-      shift: 'CapsLock',
     },
   },
   KeyA: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ф',
-      shift: 'Ф',
     },
     en: {
+      type: 'regular',
       main: 'a',
-      shift: 'A',
     },
   },
   KeyS: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ы',
-      shift: 'Ы',
     },
     en: {
+      type: 'regular',
       main: 's',
-      shift: 'S',
     },
   },
   KeyD: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'в',
-      shift: 'В',
     },
     en: {
+      type: 'regular',
       main: 'd',
-      shift: 'D',
     },
   },
   KeyF: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'а',
-      shift: 'А',
     },
     en: {
+      type: 'regular',
       main: 'f',
-      shift: 'F',
     },
   },
   KeyG: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'п',
-      shift: 'П',
     },
     en: {
+      type: 'regular',
       main: 'g',
-      shift: 'G',
     },
   },
   KeyH: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'р',
-      shift: 'Р',
     },
     en: {
+      type: 'regular',
       main: 'h',
-      shift: 'H',
     },
   },
   KeyJ: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'о',
-      shift: 'О',
     },
     en: {
+      type: 'regular',
       main: 'j',
-      shift: 'J',
     },
   },
   KeyK: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'л',
-      shift: 'Л',
     },
     en: {
+      type: 'regular',
       main: 'k',
-      shift: 'K',
     },
   },
   KeyL: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'д',
-      shift: 'Д',
     },
     en: {
+      type: 'regular',
       main: 'l',
-      shift: 'L',
     },
   },
   Semicolon: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ж',
-      shift: 'Ж',
     },
     en: {
+      type: 'shiftable',
       main: ';',
       shift: ':',
     },
   },
   Quote: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'э',
-      shift: 'Э',
     },
     en: {
+      type: 'shiftable',
       main: '\'',
       shift: '"',
     },
   },
   Enter: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Enter',
-      shift: 'Enter',
     },
     en: {
+      type: 'functional',
       main: 'Enter',
-      shift: 'Enter',
     },
   },
   ShiftLeft: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Shift',
-      shift: 'Shift',
     },
     en: {
+      type: 'functional',
       main: 'Shift',
-      shift: 'Shift',
     },
   },
   KeyZ: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'я',
-      shift: 'Я',
     },
     en: {
+      type: 'regular',
       main: 'z',
-      shift: 'Z',
     },
   },
   KeyX: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ч',
-      shift: 'Ч',
     },
     en: {
+      type: 'regular',
       main: 'x',
-      shift: 'X',
     },
   },
   KeyC: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'с',
-      shift: 'С',
     },
     en: {
+      type: 'regular',
       main: 'c',
-      shift: 'C',
     },
   },
   KeyV: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'м',
-      shift: 'М',
     },
     en: {
+      type: 'regular',
       main: 'v',
-      shift: 'V',
     },
   },
   KeyB: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'и',
-      shift: 'И',
     },
     en: {
+      type: 'regular',
       main: 'b',
-      shift: 'B',
     },
   },
   KeyN: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'т',
-      shift: 'Т',
     },
     en: {
+      type: 'regular',
       main: 'n',
-      shift: 'N',
     },
   },
   KeyM: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ь',
-      shift: 'Ь',
     },
     en: {
+      type: 'regular',
       main: 'm',
-      shift: 'M',
     },
   },
   Comma: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'б',
-      shift: 'Б',
     },
     en: {
+      type: 'shiftable',
       main: ',',
       shift: '<',
     },
   },
   Period: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: 'ю',
-      shift: 'Ю',
     },
     en: {
+      type: 'shiftable',
       main: '.',
       shift: '>',
     },
   },
   Slash: {
-    type: 'regular',
     ru: {
+      type: 'shiftable',
       main: '.',
       shift: ',',
     },
     en: {
+      type: 'shiftable',
       main: '/',
       shift: '?',
     },
   },
   ArrowUp: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: '↑',
-      shift: '↑',
+
     },
     en: {
+      type: 'regular',
       main: '↑',
-      shift: '↑',
     },
   },
   ShiftRight: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Shift',
-      shift: 'Shift',
     },
     en: {
+      type: 'functional',
       main: 'Shift',
-      shift: 'Shift',
     },
   },
   ControlLeft: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Ctrl',
-      shift: 'Ctrl',
     },
     en: {
+      type: 'functional',
       main: 'Ctrl',
-      shift: 'Ctrl',
     },
   },
   MetaLeft: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Win',
-      shift: 'Win',
     },
     en: {
+      type: 'functional',
       main: 'Win',
-      shift: 'Win',
     },
   },
   AltLeft: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Alt',
-      shift: 'Alt',
     },
     en: {
+      type: 'functional',
       main: 'Alt',
-      shift: 'Alt',
     },
   },
   Space: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Space',
-      shift: 'Space',
     },
     en: {
+      type: 'functional',
       main: 'Space',
-      shift: 'Space',
     },
   },
   AltRight: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Alt',
-      shift: 'Alt',
     },
     en: {
+      type: 'functional',
       main: 'Alt',
-      shift: 'Alt',
     },
   },
   ArrowLeft: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: '←',
-      shift: '←',
     },
     en: {
+      type: 'regular',
       main: '←',
-      shift: '←',
     },
   },
   ArrowDown: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: '↓',
-      shift: '↓',
     },
     en: {
+      type: 'regular',
       main: '↓',
-      shift: '↓',
     },
   },
   ArrowRight: {
-    type: 'regular',
     ru: {
+      type: 'regular',
       main: '→',
-      shift: '→',
     },
     en: {
+      type: 'regular',
       main: '→',
-      shift: '→',
     },
   },
   ControlRight: {
-    type: 'functional',
     ru: {
+      type: 'functional',
       main: 'Ctrl',
-      shift: 'Ctrl',
     },
     en: {
+      type: 'functional',
       main: 'Ctrl',
-      shift: 'Ctrl',
     },
   },
 };
 
-let lang = 'en';
-let isShift = 'main';
+let language = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
+localStorage.setItem('language', language);
+let isCapsLock = false;
 const keysArray = Object.keys(keyboard);
+let keyNodes;
 
 const body = document.querySelector('#body');
 const textArea = document.createElement('textarea');
-textArea.classList.add('text-area');
-textArea.textContent = '';
 const keyboardWrapper = document.createElement('div');
+
+textArea.classList.add('text-area');
 keyboardWrapper.classList.add('key-wrapp');
+textArea.textContent = '';
 
 body.append(textArea);
 body.append(keyboardWrapper);
@@ -724,9 +700,11 @@ function prepareKeyboardLayout() {
     const keyBoardKey = document.createElement('div');
     keyBoardKey.classList.add('key');
     keyBoardKey.setAttribute('data-key-code', key);
-    keyBoardKey.textContent = keyboard[key][lang][isShift];
+    keyBoardKey.setAttribute('data-key-type', keyboard[key][language].type);
+    keyBoardKey.textContent = keyboard[key][language].main;
     keyboardWrapper.append(keyBoardKey);
   });
+  keyNodes = document.querySelectorAll('.key');
 }
 
 function repaintKeyboard() {
@@ -735,57 +713,65 @@ function repaintKeyboard() {
   keys.forEach((node) => {
     const keyCode = node.getAttribute('data-key-code');
     if (keyboard[keyCode].type === 'regular') {
-      node.textContent = keyboard[keyCode][lang][isShift];
+      node.textContent = keyboard[keyCode][lang].main;
     }
   });
 }
 
 function handleFunctionKeyStroke(keyCode) {
-  if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
-    if (isShift === 'main') {
-      isShift = 'shift';
-    } else {
-      isShift = 'main';
-    }
-    repaintKeyboard();
-  }
-  if (keyCode === 'CapsLock') {
-    if (isShift === 'main') {
-      document.querySelector('[data-key-code="CapsLock"]').classList.add('key_active');
-      isShift = 'shift';
-    } else {
-      document.querySelector('[data-key-code="CapsLock"]').classList.remove('key_active');
-      isShift = 'main';
-    }
-    repaintKeyboard();
-  }
+  // if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
+  //   if (isShift === 'main') {
+  //     isShift = 'shift';
+  //   } else {
+  //     isShift = 'main';
+  //   }
+  //   repaintKeyboard();
+  // }
+  // if (keyCode === 'CapsLock') {
+  //   if (isShift === 'main') {
+  //     document.querySelector('[data-key-code="CapsLock"]').classList.add('key_active');
+  //     isShift = 'shift';
+  //   } else {
+  //     document.querySelector('[data-key-code="CapsLock"]').classList.remove('key_active');
+  //     isShift = 'main';
+  //   }
+  //   repaintKeyboard();
+  // }
+  // if (keyCode === 'ControlRight' || keyCode === 'ControlLeft' || keyCode === 'AltRight' || keyCode === 'AltLeft') {
+  //   const ctrl = document.querySelector('.key_active div[data-key-code="ControlRight"]') || document.querySelector('.key_activediv[data-key-code="ControlLeft"]');
+  //   const alt = document.querySelector('.key_active div[data-key-code="AltRight"]') || document.querySelector('.key_activediv[data-key-code="AltRight"]');
+  //   if (ctrl && alt) {
+  //     lang = 'ru';
+  //     repaintKeyboard();
+  //   }
+  // }
 }
 
 function keyStrokeHandler(e) {
-  const keyCode = e.code;
-  const key = document.querySelector(`[data-key-code="${keyCode}"]`);
-  key.classList.add('key_active');
-
-  if (keyboard[keyCode].type === 'regular') {
-    const char = keyboard[keyCode][lang][isShift];
-    textArea.textContent += char;
-  } else {
-    handleFunctionKeyStroke(keyCode);
+  document.querySelector(`[data-key-code="${e.code}"]`).classList.add('key_active');
+  if (e.key === 'Alt' || e.key === 'Control') {
+    changeLang(e);
   }
 }
 
 function keyUpHandler(e) {
-  const keyCode = e.code;
-  const key = document.querySelector(`[data-key-code="${keyCode}"]`);
-  if (key.dataset.keyCode !== 'CapsLock') key.classList.remove('key_active');
+  document.querySelector(`[data-key-code="${e.code}"]`).classList.remove('key_active');
 
-  if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
-    if (isShift === 'main') {
-      isShift = 'shift';
-    } else {
-      isShift = 'main';
-    }
-    repaintKeyboard();
+  // if (keyCode === 'ShiftLeft' || keyCode === 'ShiftRight') {
+  //   if (isShift === 'main') {
+  //     isShift = 'shift';
+  //   } else {
+  //     isShift = 'main';
+  //   }
+  //   repaintKeyboard();
+  // }
+}
+
+function changeLang(e) {
+  if (e.ctrlKey && e.altKey) {
+    language = (language === 'en' ? 'ru' : 'en');
+    localStorage.setItem('language', language);
+    prepareKeyboardLayout();
   }
 }
 
